@@ -35,7 +35,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:cropToPadding="true"
-            android:contentDescription="@string/conversation_item_received__contact_photo_description" />
+            android:contentDescription="@string/conversation_item_received__contact_photo_description"/>
 
         <LinearLayout android:id="@+id/body_bubble"
                       android:layout_width="wrap_content"
@@ -43,7 +43,8 @@
                       android:layout_toRightOf="@id/contact_photo"
                       android:layout_marginRight="35dp"
                       android:background="@drawable/received_bubble"
-                      android:orientation="vertical">
+                      android:orientation="vertical"
+                      android:padding="@dimen/conversation_item_received_bubble_padding">
 
             <org.thoughtcrime.securesms.components.ThumbnailView
                     android:id="@+id/image_view"
@@ -68,8 +69,9 @@
                     android:id="@+id/conversation_item_body"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
+                    android:paddingLeft="@dimen/conversation_item_received_text_left_padding"
+                    android:paddingRight="@dimen/conversation_item_received_text_right_padding"
+                    android:paddingBottom="@dimen/conversation_item_received_text_bottom_padding"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="?conversation_item_received_text_primary_color"
                     android:textColorLink="?conversation_item_received_text_primary_color"
